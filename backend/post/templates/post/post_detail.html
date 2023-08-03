@@ -107,7 +107,7 @@
 
                 <tr style="border-bottom: 1px solid #ccc;">
                     <td style="background-color: #f3f6fc; padding: 20px; text-align: center;">작성일</td>
-                    <td style="width: 10%;"><p style="text-align: left; margin-left: 4%; margin-top: 4%;">{{post.created_at}}</p></td>
+                    <td style="width: 10%;"><p style="text-align: left; margin-left: 4%; margin-top: 4%;">{{post.created_at|date:"Y. m. d. H시 i분"}}</p></td>
                     <td style="background-color:#f3f6fc; padding: 20px; text-align: center;">작성자</td>
                     <td><p style="text-align: left; margin-left: 10%; margin-top: 11%;">{{post.author}}</p></td>
                 </tr>       
@@ -126,8 +126,8 @@
               <button type="button" class="btn-btn" onclick="location.href='/post';" style="color:white; margin-left:40%; box-shadow: 2px 2px 2px #dedede;">이전 페이지로</button>
               {% if request.user == post.author %}
                 <button type="button" class="btn-s" onclick="confirmDelete({{ post.id }})" style="color:white; color:white; box-shadow: 2px 2px 2px #dedede;">게시물 삭제</button>
-              {% elif user.is_authenticated and user.is_staff %}
-                <button type="button" class="btn-s" onclick="confirmDelete({{ post.id }})" style="color:white; color:white; box-shadow: 2px 2px 2px #dedede;">게시물 삭제</button>
+                <button type="button" class="btn-s" onclick="location.href='/post/edit/{{post.id}}/';" style="color:white; box-shadow: 2px 2px 2px #dedede;">게시물 수정</button>
+
               {% endif %}
             </div>
 
@@ -167,7 +167,7 @@
 
       <div class="container mt-4">
         <div class="copyright">
-          &copy; Copyright <strong><span>KT</span></strong>. All Rights Reserved.
+          &copy; Copyright <strong><span></span></strong>. All Rights Reserved.
         </div>
       </div>
 

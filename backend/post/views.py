@@ -42,3 +42,16 @@ def delete_post(request, post_id):
         post = Post.objects.get(pk=post_id)
         post.delete()
         return JsonResponse({'success': True})
+
+def post_edit(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+
+    if request.method == "POST":
+        form = PostForm(request.POST, instance=post)
+        if form.is_valid():
+            post = form.save()
+            return redirect('post:post_detail', pk=post.id)
+    else:
+        form = PostForm(instance=post)
+        
+    return render(request, 'post/post_edit.html', {'form': form})
