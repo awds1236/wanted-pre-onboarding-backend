@@ -20,7 +20,8 @@ def login_view(request):
                 payload = jwt_payload_handler(user)
                 token = jwt_encode_handler(payload)
 
-                request.session['token'] = token  # 토큰을 세션에 저장
+                request.session['token'] = token
+                print("사용자 token : " +   token)  # 토큰을 세션에 저장
                 return HttpResponseRedirect('/')
             else:
                 form.add_error(None, "아이디 혹은 비밀번호가 틀립니다.")
