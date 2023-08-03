@@ -43,8 +43,12 @@ def delete_post(request, post_id):
         post.delete()
         return JsonResponse({'success': True})
 
+@login_required
 def post_edit(request, post_id):
     post = get_object_or_404(Post, id=post_id)
+
+    if post.author != request.user:
+        return redirect('main:main')
 
     if request.method == "POST":
         form = PostForm(request.POST, instance=post)
