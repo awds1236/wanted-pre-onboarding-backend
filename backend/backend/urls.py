@@ -1,5 +1,4 @@
 from django.contrib import admin
-from django.conf.urls import url
 from django.urls import path, include, re_path
 from django.shortcuts import render
 from django.contrib.auth import views as auth_views

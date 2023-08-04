@@ -92,11 +92,10 @@
       <form method="post" id="login-form">
         {% csrf_token %}
         <!-- 수정된 부분: name 속성 값 변경 -->
-        <input type="text" name="username" placeholder="ID">
-        <input type="password" name="password" placeholder="Password">
-        <label for="remember-check">
-            <input type="checkbox" id="remember-check"> 아이디 저장하기
-        </label>
+        <input type="text" name="username" id = "username" placeholder="ID">
+        <div class="error_next_box" style="display: none;">Error message</div>
+        <input type="password" name="password" id="password" placeholder="Password">
+        <div class="error_next_box" style="display: none;">Error message</div>
         <input type="submit" value="Login" style="box-shadow: 2px 2px 2px #dedede;">
         <!--<button class="join-label">-->
         <a class="join-label" href="/join" style="color: white; box-shadow: 2px 2px 2px #dedede;">Join Us</a>
