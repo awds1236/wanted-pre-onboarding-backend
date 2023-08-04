@@ -40,22 +40,19 @@
       <a href="/" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>BBUMAS</h1>
+        <h1>BackEnd</h1>
       </a>
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="/" class="active">Home</a></li>
-          {% if user.is_authenticated and user.special %}
-            <li><a href="/video">Video</a></li>
-          {% endif %}
+          <li><a href="/">Home</a></li>
           <li class="dropdown"><a href="/post"><span>Post</span><i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="/post">게시판 목록</a></li>
               {% if user.is_authenticated %}
-                <li><a href="/post/posting">게시물 작성</a></li>
+                <li><a href="/post/posting" class="active">게시물 작성</a></li>
               {% endif %}
             </ul>
           </li>
