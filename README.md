@@ -10,8 +10,8 @@ conda create --name project python=3.10<br>
 conda activate project<br>
 pip install django<br> 
 conda install -c anaconda mysqlclient<br> 
-pip install requirements.txt<br>
 cd wanted-pre-onboarding-backend<br>
+pip install requirements.txt<br>
 cd backend<br>
 python manage.py runserver<br>
 (django 서버 시작)<br>
