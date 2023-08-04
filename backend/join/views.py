@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from .forms import UserRegistrationForm
+from django.views.decorators.csrf import csrf_exempt
 
+@csrf_exempt
 def signup_view(request):
     if request.method == 'POST':
         form = UserRegistrationForm(request.POST)

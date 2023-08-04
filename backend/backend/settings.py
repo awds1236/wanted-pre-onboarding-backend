@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'rest_framework',
+    'drf_yasg',
     'join',
     'login',
     'post',
@@ -88,13 +90,24 @@ import pymysql
 
 pymysql.install_as_MySQLdb()
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'backend',
+#         'USER': 'root',
+#         'PASSWORD': '123123',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'backend',
-        'USER': 'root',
-        'PASSWORD': '123123',
-        'HOST': 'localhost',
+        'USER': 'admin',
+        'PASSWORD': 'backend1',
+        'HOST': 'backend1.clx6f4ezzs9u.ap-northeast-2.rds.amazonaws.com',
         'PORT': '3306',
     }
 }

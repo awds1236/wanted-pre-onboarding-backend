@@ -35,12 +35,13 @@
 
 <body>
 
-  <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="/" class="logo d-flex align-items-center">
-        <h1>BBUMAS</h1>
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>BackEnd</h1>
       </a>
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -48,19 +49,19 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="/">Home</a></li>
-          {% if user.is_authenticated and user.special %}
-            <li><a href="/video">Video</a></li>
-          {% endif %}
-          <li class="dropdown"><a href="/post"><span>Post</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li class="dropdown"><a href="/post"><span>Post</span><i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-              <li><a href="/post">신고 게시판 목록</a></li>
+              <li><a href="/post">게시판 목록</a></li>
               {% if user.is_authenticated %}
-                <li><a href="/post/posting">신고하기</a></li>
+                <li><a href="/post/posting">게시물 작성</a></li>
               {% endif %}
             </ul>
           </li>
-          <li><a href="/map">Map</a></li>
-          <li><a class="get-a-quote" href="/login" class="active">Login</a></li>
+          {% if user.is_authenticated %}
+            <li><a href="{% url 'logout' %}" class="get-a-quote">Logout</a></li>
+          {% else %}
+            <li><a class="get-a-quote" href="/login">Login</a></li>
+          {% endif %}
         </ul>
       </nav><!-- .navbar -->
 
@@ -117,9 +118,26 @@
 
           <br>
           <button type="submit" class="joinus" style="box-shadow: 2px 2px 2px #dedede;">Create</button>
+        
+
+          <script>
+            function checkPasswordMatch() {
+                var password = document.getElementById("password").value;
+                var confirmPassword = document.getElementById("pswd2").value;
+        
+                if (password != confirmPassword) {
+                    alert("비밀번호가 일치하지 않습니다.");
+                    event.preventDefault();
+                }
+            }
+          </script>
         </form>
       </div>
       
+
+      
+
+
       </form>
     </div>
     
