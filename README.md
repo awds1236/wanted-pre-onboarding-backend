@@ -29,10 +29,10 @@
 	(주소 입력으로 삭제 불가, 작성자만 활성화 되는 게시물 삭제 버튼으로 삭제)<br>
 
 ## 데이터베이스 테이블 구조<br>
-<br>
+
 * User<br>
 	![user](https://github.com/awds1236/wanted-pre-onboarding-backend/assets/102665306/9914b8c6-6046-4eba-a65d-f0d141dde9ea)
-<br>
+
 * Post<br>
 	![post](https://github.com/awds1236/wanted-pre-onboarding-backend/assets/102665306/31277cb7-ae13-470a-8a8f-93dab8dbf95c)
 <br>
