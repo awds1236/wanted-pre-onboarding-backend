@@ -65,32 +65,16 @@ function checkPw() {
     }
 }
 
-function comparePw() {
-    if(pw2.value === pw1.value) {
-        error[2].style.display = "none";
-    } else if(pw2.value !== pw1.value) {
-        error[2].innerHTML = "비밀번호가 일치하지 않습니다.";
-        error[2].style.display = "block";
-    } 
-
-    if(pw2.value === "") {
-        error[2].innerHTML = "필수 정보입니다.";
-        error[2].style.display = "block";
-    }
-}
-
-
 document.querySelector('form').addEventListener("submit", function(event) {
     event.preventDefault();
     var pswd1 = document.querySelector("#pswd1").value;
-    var pswd2 = document.querySelector("#pswd2").value;
     var email = document.querySelector("#email").value;
 
     var emailPattern = /[a-z0-9]{2,}@[a-z0-9-]{2,}\.[a-z0-9]{2,}/;  // 이메일 패턴
     var pwPattern = /^(?=.*[a-zA-Z])(?=.*\d).{8,}$/;
 
 
-    if (pswd1 === "" || pswd2 === "" || email === "") {
+    if (pswd1 === "" || email === "") {
         alert("필수 정보를 모두 입력해주세요.");
         event.preventDefault(); // 폼 제출을 막습니다.
     }
@@ -105,10 +89,6 @@ document.querySelector('form').addEventListener("submit", function(event) {
         event.preventDefault(); // 폼 제출을 막습니다.
     }
 
-    else if (pswd1 !== pswd2) {
-        alert("비밀번호를 확인해주세요.");
-        event.preventDefault(); // 폼 제출을 막습니다.
-    }
     else {
         alert("가입이 완료되었습니다.");
         document.querySelector('form').submit();

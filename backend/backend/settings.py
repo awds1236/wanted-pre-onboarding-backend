@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-va++2y0!xm(8&&9vswp+ec5+ih77^rc56++w^^9c=@oqwt8ngo
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -100,6 +100,7 @@ pymysql.install_as_MySQLdb()
 #         'PORT': '3306',
 #     }
 # }
+
 
 DATABASES = {
     'default': {
