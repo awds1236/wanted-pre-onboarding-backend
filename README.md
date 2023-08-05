@@ -9,8 +9,6 @@
 
 * conda create --name project python=3.10<br>
 * conda activate project<br>
-* pip install django<br> 
-* conda install -c anaconda mysqlclient<br> 
 * cd wanted-pre-onboarding-backend<br>
 * pip install -r requirements.txt<br>
 * cd backend<br>
