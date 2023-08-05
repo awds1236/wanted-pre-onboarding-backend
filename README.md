@@ -3,8 +3,9 @@
 ## 지원자 : 안성균<br>
 
 ## 애플리케이션 실행 방법<br>
+(Window, Visual Studio Code cmd 기준)
 * anaconda 설치(https://repo.anaconda.com/archive/Anaconda3-2023.07-1-Windows-x86_64.exe)<br>
-* 환경 변수 path에 C:\anaconda3\Scripts 추가 (anaconda 설치한 위치의 Scripts)<br>
+* 환경 변수 path에 C:\anaconda3\Scripts 추가 (anaconda 설치한 위치의 Scripts, 설치 경로에 한글 포함 X)<br>
 
 * conda create --name project python=3.10<br>
 * conda activate project<br>
@@ -204,8 +205,14 @@ https://youtu.be/U5Q4o9zu8UU<br>
 		  "error": "Post not found"
 		}
 
+## AWS 웹 어플리케이션 배포
+### API 주소 
+	13.209.217.244
+### 설계한 AWS 환경
+![구조도](https://github.com/awds1236/wanted-pre-onboarding-backend/assets/102665306/d9ff4e2d-3b20-4b45-97e5-6297d09c4086)
 
-
+ 
+	
 
 
 
