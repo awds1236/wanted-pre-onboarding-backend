@@ -12,7 +12,7 @@
 * pip install django<br> 
 * conda install -c anaconda mysqlclient<br> 
 * cd wanted-pre-onboarding-backend<br>
-* pip install requirements.txt<br>
+* pip install -r requirements.txt<br>
 * cd backend<br>
 * python manage.py runserver<br>
 	(django 서버 시작)<br>
